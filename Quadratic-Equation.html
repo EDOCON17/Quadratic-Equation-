@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title> Real roots of a quadratic equation </title>
+</head>
+<body>
+    <script>
+        var question = true;
+        var a, b, c, f, root, root1, root2, d;
+        while (question)
+        {
+            a = prompt("what is the a in your equation ??");
+            b = prompt("what is the b in your equation ??");
+            c = prompt("what is the c in your equation ??");
+
+            f = b *b + (- 4 * a * c);
+            d = 2.0 * a;
+            root = Math.sqrt(f);
+            if (f < 0) {
+                alert("no root for this equation!");
+                question = confirm("try another equation");
+
+
+            } else {
+                root1 = (-b + root) / d;
+                root2 = (-b - root) / d;
+                document.write("x1=" + root1 + "<br / >");
+                document.write("x2=" + root2);
+                question = false;
+            }
+        }
+    </script>
+</body>
+</html>
